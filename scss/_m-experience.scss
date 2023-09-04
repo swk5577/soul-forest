@@ -1,0 +1,746 @@
+@import "_reset";
+@import "_mixin";
+
+@media (max-width:480px){
+
+    .main{
+
+        .bg{
+            position: relative;
+            background-image: url("../img/grass-1784140_1920_2.png");
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+            >h2{
+                @include h2();
+            }
+            &::after{
+                @include bg();
+            }
+        }
+        
+        
+        .indicator{
+            @include main-width(){
+                margin-bottom: 100px
+            };
+            >ul{
+                @include flex(flex-start,center);
+                >li{
+                    font-size: 14px;
+                    padding-right: 20px;
+                    margin-right: 10px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-image: url("../img/icon.png");
+                        background-size: 100% 100%;
+                        width: 8px;
+                        height: 12px;
+                        margin-left: 10px;
+                    }
+                    &:nth-last-of-type(1){
+                        color: #90BC43;
+                        &::after{
+                            content: "";
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .experience-detail{
+            @include main-width(){
+                margin-bottom: 100px
+            };
+            padding: 0px 20px;
+            >p{
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            .experience-box{
+                .experience-info-box{
+                    display: block;
+                    margin-bottom: 100px;
+                    >.left{
+                        width: 100%;
+    
+                        >img{
+                            border-radius: 10px;
+                            width: 100%;
+    
+                        }
+                    }
+    
+                    >.right{
+                        width: 100%;
+                        margin: 50px auto;
+                        >.title{
+                            font-size: 18px;
+                            color: #4E813B;
+                            margin: 25px 0;
+                        }
+                        >ul{
+                            display: block;
+                            .a{
+                                width: 100%;
+                            }
+                            .b{
+                                width: 100%;
+                            }
+                            .c{
+                                width: 100%;
+                            }
+                            >li{
+                                width: 100%;
+                                >dl{
+                                    @include flex();
+                                    align-items: center;
+                                    line-height: 3;
+                                    >dt{                    
+                                        font-size: 14px;
+                                        color: #4E813B;
+                                        &::after{
+                                            content: ':';
+                                            padding: 0px 10px;
+                                        }
+                                    }
+                                    >dd{
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .reservation-btn-box{
+                    @include flex(flex-end,center);
+                    flex-direction: column;
+                    >a{
+                        display: block;
+                        margin: 10px auto;
+                        width: 100%;
+                        height: 45px;
+                        border-radius: 10px;
+                        border: 1px solid #90BC43;
+                        >span{
+                            font-size: 14px;
+                            width: 100%;
+                            height: 100%;
+                            @include flex(center,center);
+                            color: white;
+                        }
+                    }
+                    .reserve{
+                        background-color: #90BC43;
+                    }
+                    .reserve-check{
+                        >span{
+                            color: #CCCCCC;
+                        }
+                    }
+                }
+            }
+            .experience-con-box{
+                .experience-tab{
+                    @include flex();
+                    >li{
+                        cursor: pointer;
+                        text-align: center;
+                        width: 50%;
+                        padding-bottom: 10px;
+                        border-bottom: 2px solid #EDEDED;
+                        margin-bottom: 50px;
+                    }
+                    >li.on{
+                        border-bottom: 2px solid #4E813B;
+                    }
+                }
+                
+                .experience-con-tab{
+                    >li{
+                        display: none;
+                    }
+                    >li.on{
+                        display: block;
+                    }
+                    .experience-con{
+                        .ll{
+                            >img{
+                                width: 100%;
+                                margin: 0 auto;
+                            }
+                        }
+                        >img{
+                            width: 100%;
+                            margin: auto;
+                            margin-bottom: 200px;
+                        }
+                        .caution-box{
+                            >ul{
+                                >li{
+                                    >.title{
+                                        position: relative;
+                                        padding: 30px 0px;
+                                        border-bottom:  2px solid #90BC43;
+                                        padding-left: 150px;
+                                        cursor: pointer;
+                                        &::before{
+                                            content: '※';
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50px;
+                                            transform: translateY(-50%);
+                                        }
+                                        &::after{
+                                            content: '';
+                                            background-image: url('../img/icon_accordion_open.svg');
+                                            background-size: 100% 100%;
+                                            width: 15px;
+                                            height: 15px;
+                                            position: absolute;
+                                            top: 50%;
+                                            right: 10px;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+                                    >.content{
+                                        display: none;
+                                        word-break: break-all;
+                                        padding: 30px 0px;
+                                        padding-left: 10px;
+                                        line-height: 2;
+                                    }
+                                }
+                                >li.on{
+                                    >.title{
+                                        &::after{
+                                            content: '';
+                                            background-image: url('../img/icon_accordion_open.svg');
+    
+                                            background-size: 100% 100%;
+                                            width: 15px;
+                                            height: 15px;
+                                            position: absolute;
+                                            top: 50%;
+                                            right: 10px;
+                                            transform: translateY(-50%) rotate(180deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .map-con{
+                        >p{
+                            text-align: center;
+                            margin-bottom: 40px;
+                        }
+                        .traffic-nav{
+                            width: auto;
+                            @include flex(space-evenly,center);
+                            margin-top: 75px;
+                            >li{
+                                font-size: 18px;
+                                cursor: pointer;
+                            }
+                            >li.on{
+                                color: #4E813B;
+                                font-size: 20px;
+                            }
+                        }
+    
+                        .traffic-con-tab{
+                            >li{
+                                display: none;
+                                .traffic1{
+                                    .traffic_line{
+                                        border: 1px solid #CBCBCB;
+                                        margin: 30px 0;
+                                    }
+                                    .traffic_content{
+                                        .traffic_pos{
+                                            margin-bottom: 55px;
+                                            >h2{
+                                                color: #58585A;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                font-size: 14px;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                line-height: normal;
+                                                margin-bottom: 18px;
+                                            }
+                                            >p{
+                                                display: flex;
+                                                align-items: center;
+                                                color: #58585A;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                font-size: 14px;
+                                                font-style: normal;
+                                                font-weight: 350;
+                                                line-height: normal;
+                                                margin-bottom: 9px;
+                                            }
+                                            >p::before{
+                                                content: '';
+                                                display: inline-block;
+                                                background-size: cover;
+                                                width: 24px; height: 21px;
+                                                margin-right: 11px;
+                                            }
+                                            >p:nth-of-type(1)::before{
+                                                content: '';
+                                                background: url('../StoryImg/road_Img/i_bus_01.png') no-repeat;
+                                            }
+                                            >p:nth-of-type(2)::before{
+                                                content: '';
+                                                background: url('../StoryImg/road_Img/i_bus_05.png') no-repeat;
+                                            }
+                                            >p:nth-of-type(3)::before{
+                                                content: '';
+                                                background: url('../StoryImg/road_Img/i_bus_04.png') no-repeat;
+                                            }
+                                            >p:nth-of-type(4)::before{
+                                                content: '';
+                                                background: url('../StoryImg/road_Img/i_bus_06.png') no-repeat;
+                                            }
+                                            >p:nth-of-type(5)::before{
+                                                content: '';
+                                                background: url('../StoryImg/road_Img/i_bus_02.png') no-repeat;
+                                            }
+                                        }
+                                        .traffic_pos:nth-last-of-type(1){
+                                            margin-bottom: 0;
+                                        }
+                                        .traffic_pos:nth-of-type(3) p:nth-of-type(3)::before{
+                                            content: '';
+                                            background: url('../StoryImg/road_Img/i_bus_03.png') no-repeat;
+                                        }
+                                    }
+                                }
+    
+                                .traffic2{
+                                    .traffic_line{
+                                        border: 1px solid #CBCBCB;
+                                        margin: 30px 0;
+                                    }
+                                    .traffic_content{
+                                        .traffic_pos{
+                                            display: flex;
+                                            align-items: center;
+                                            margin-bottom: 14px;
+                                            p{
+                                                display: flex;
+                                                align-items: center;
+                                                color: #58585A;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                font-size: 14px;
+                                                font-weight: 350;
+                                                line-height: normal;
+                                                margin: 0 10px 0 0;
+                                            }
+                                            p:nth-of-type(1){
+                                                color: #AA9872;
+                                            }
+                                            span{
+                                                display: inline-flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                width: 24px; height: 24px;
+                                                background-color: #AA9872;
+                                                color: white;
+                                                border-radius: 50%;
+                                                margin-right: 10px;
+                                                font-size: 12px;
+                                                font-weight: 400;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                            }
+                                        }
+                                        .traffic_pos:nth-of-type(3) p:nth-of-type(1){
+                                            color: #8B50A4;
+                                        }
+                                        .traffic_pos:nth-of-type(3) span{
+                                            background-color: #8B50A4;
+                                        }
+                                        .traffic_pos:nth-of-type(4) span{
+                                            background-color: #8CADCB;
+                                            width: 45px; height: 24px;
+                                            border-radius: 23px;
+                                        }
+                                        .traffic_pos:nth-of-type(4) p:nth-of-type(1){
+                                            display: none;
+                                        }
+                                    }
+                                }
+    
+                                .traffic3{
+                                    .traffic_line{
+                                        border: 1px solid #CBCBCB;
+                                        margin: 30px 0;
+                                    }
+                                    .traffic_content{
+                                        .traffic_pos{
+                                            margin-bottom: 60px;
+                                            .navgation{
+                                                display: flex;
+                                                align-items: center;
+                                                span{
+                                                    color: #000;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    font-size: 14px;
+                                                    font-weight: 400;
+                                                    line-height: normal;
+                                                    margin-right: 14px;
+                                                }
+                                                h2{
+                                                    color: #58585A;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    font-size: 14px;
+                                                    font-weight: 350;
+                                                    line-height: normal;
+                                                    margin: 0;
+                                                }
+                                            }
+                                            >ul{
+                                                padding: 0;
+                                                margin-top: 19px;
+                                                li{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    color: #58585A;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    font-size: 14px;
+                                                    font-weight: 350;
+                                                    line-height: 1.7;
+                                                    letter-spacing: -0.8px;
+                                                }
+                                                li::before{
+                                                    content: '';
+                                                    display: inline-block;
+                                                    width: 5px; height: 5px;
+                                                    background-color: #58585A;
+                                                    border-radius: 50%;
+                                                    margin-right:10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                .traffic4{
+                                    .traffic_line{
+                                        border: 1px solid #CBCBCB;
+                                        margin: 30px 0;
+                                    }
+                                    .traffic_content{
+                                        .traffic_pos{
+                                            margin-bottom: 30px;
+                                            >div{
+                                                margin-bottom: 5px;
+                                                h3{
+                                                    display: inline-block;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    color: #000;
+                                                    font-size: 14px;
+                                                    font-weight: 500;
+                                                    line-height: normal;
+                                                    margin-right: 15px;
+                                                }
+                                                p{
+                                                    display: inline-flex;
+                                                    align-items: center;
+                                                    color: #58585A;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    font-size: 14px;
+                                                    font-style: normal;
+                                                    font-weight: 350;
+                                                    line-height: normal;
+                                                }
+                                            }
+                                        }
+                                        .box{
+                                            height: 104px;
+                                            >ul{
+                                                width: 100%;
+                                                padding: 0;
+                                                margin: 0;
+                                                >li{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    border:solid 1px #878787;
+                                                    height: 40px;
+                                                    text-align: center;
+                                                    float: left;
+                                                    margin-bottom: -1px;
+                                                    margin-right: -1px;
+                                                    background-color: #d9d9d9;
+                                                    color: #58585A;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    font-size: 10px;
+                                                    font-weight: 350;
+                                                    line-height: normal;
+                                                    padding: 0 10px;
+                    
+                                                }
+                                                >li:nth-of-type(1){
+                                                    width: 8%;
+                                                }
+                                                >li:nth-of-type(2){
+                                                    width: 21.3%;
+                                                }
+                                                >li:nth-of-type(3){
+                                                    width: 14%;
+                                                }
+                                                >li:nth-of-type(4){
+                                                    width: 35%;
+                                                }
+                                                >li:nth-of-type(5){
+                                                    width: 22%;
+                                                }
+                                            }
+                                            >ul:nth-of-type(2) li{
+                                                height: 64px;
+                                                background-color: #fff;
+                                            }
+                                        }
+                                        >ul{
+                                            padding: 0;
+                                            margin-top: 19px;
+                                            margin-bottom: 60px;
+                                            li{
+                                                display: flex;
+                                                align-items: center;
+                                                color: #58585A;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                font-size: 14px;
+                                                font-weight: 350;
+                                                line-height: 1.7;
+                                                letter-spacing: -0.8px;
+                                            }
+                                            li::before{
+                                                content: '';
+                                                display: inline-block;
+                                                width: 5px; height: 5px;
+                                                background-color: #58585A;
+                                                border-radius: 50%;
+                                                margin-right:10px;
+                                            }
+                                        }
+                                        .di{
+                                            margin-bottom: 5px;
+                                            h3{
+                                                display: inline-block;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                color: #000;
+                                                font-size: 14px;
+                                                font-weight: 500;
+                                                line-height: normal;
+                                                margin-right: 15px;
+                                                margin-bottom: 5px;
+                                            }
+                                            p{
+                                                margin-top: 10px;
+                                                display: flex;
+                                                align-items: center;
+                                                color: #58585A;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                font-size: 14px;
+                                                font-style: normal;
+                                                font-weight: 350;
+                                                line-height: normal;
+                                            }
+                                            a{
+                                                color: #4E813B;
+                                                display: inline-block;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                font-size: 14px;
+                                                margin-top: 5px;
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                        .box2{
+                                            height: 835px;
+                                            margin-bottom: 5px;
+                                            >ul{
+                                                width: 100%;
+                                                padding: 0;
+                                                margin: 0;
+                                                >li{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    border:solid 1px #878787;
+                                                    height: 90px;
+                                                    text-align: center;
+                                                    float: left;
+                                                    margin-bottom: -1px;
+                                                    margin-right: -1px;
+                                                    background-color: white;
+                                                    color: #58585A;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    font-size: 10px;
+                                                    font-weight: 350;
+                                                    line-height: normal;
+                                                    padding: 0 10px;
+                    
+                                                }
+                                                >li:nth-of-type(1){
+                                                    width: 16%;
+                                                }
+                                                >li:nth-of-type(2){
+                                                    width: 25%;
+                                                    margin-right: -2px;
+                                                }
+                                                li:nth-of-type(3){
+                                                    width: 59.2%;
+                                                    text-align: left;
+                                                    justify-content: left;
+                                                }
+                                            }
+                                            >ul:nth-of-type(1) li{
+                                                height: 40px;
+                                                background-color: #d9d9d9;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                text-align: center;
+                                            }
+                                            >ul:nth-of-type(5) li{
+                                                margin-bottom: -2px;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                .traffic5{
+                                    .traffic_line{
+                                        border: 1px solid #CBCBCB;
+                                        margin: 30px 0;
+                                    }
+                                    .traffic_content{
+                                        .traffic_pos{
+                                            margin-bottom: 30px;
+                                            >div{
+                                                margin-bottom: 5px;
+                                                h3{
+                                                    display: inline-block;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    color: #000;
+                                                    font-size: 14px;
+                                                    font-weight: 500;
+                                                    line-height: normal;
+                                                    margin-right: 15px;
+                                                }
+                                                p{
+                                                    display: inline-flex;
+                                                    align-items: center;
+                                                    color: #58585A;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    font-size: 14px;
+                                                    font-style: normal;
+                                                    font-weight: 350;
+                                                    line-height: normal;
+                                                }
+                                            }
+                                        }
+                                        .box{
+                                            height: 245px;
+                                            ul{
+                                                width: 100%;
+                                                padding: 0;
+                                                margin: 0;
+                                                li{
+                                                    padding: 0 10px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    border:solid 1px #878787;
+                                                    height: 70px;
+                                                    text-align: center;
+                                                    float: left;
+                                                    margin-bottom: -1px;
+                                                    margin-right: -1px;
+                                                    background-color: #fff;
+                                                    color: #58585A;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    font-size: 10px;
+                                                    font-weight: 350;
+                                                    line-height: normal;
+                    
+                                                }
+                                                li:nth-of-type(1){
+                                                    width: 8%;
+                                                }
+                                                li:nth-of-type(2){
+                                                    width: 21.3%;
+                                                }
+                                                li:nth-of-type(3){
+                                                    width: 14%;
+                                                }
+                                                li:nth-of-type(4){
+                                                    width: 35%;
+                                                }
+                                                li:nth-of-type(5){
+                                                    width: 22%;
+                                                }
+                                            }
+                                            ul:nth-of-type(1) li{
+                                                height: 40px;
+                                                background-color: #d9d9d9;
+                                            }
+                                        }
+                                        >ul{
+                                            padding: 0;
+                                            margin-top: 19px;
+                                            li{
+                                                display: flex;
+                                                align-items: center;
+                                                color: #58585A;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                font-size: 14px;
+                                                font-weight: 350;
+                                                line-height: 1.7;
+                                                letter-spacing: -0.8px;
+                                            }
+                                            li::before{
+                                                content: '';
+                                                display: inline-block;
+                                                width: 5px; height: 5px;
+                                                background-color: #58585A;
+                                                border-radius: 50%;
+                                                margin-right:10px;
+                                            }
+                                        }
+                                        >div{
+                                            a{
+                                                color: #4E813B;
+                                                display: inline-block;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                font-size: 14px;
+                                                margin-top: 5px;
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                            }
+                            >li.on{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

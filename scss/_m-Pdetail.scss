@@ -1,0 +1,176 @@
+@import "_reset";
+@import "_mixin";
+.bg {
+    position: relative;
+    background-image: url("../img/pots-716579_1920.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    height: 400px;
+    > h2 {
+      @include h2();
+      z-index: 99;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/bottom.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 0%;
+      z-index: 88;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+//////////////////
+.indicator{
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    >ul{
+        @include flex(flex-start,center);
+        >li{
+            font-size: 14px;
+            padding-right: 20px;
+            margin-right: 10px;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url("../img/icon.png");
+                background-size: 100% 100%;
+                width: 8px;
+                height: 12px;
+                margin-left: 10px;
+            }
+            &:nth-last-of-type(1){
+                color: #90BC43;
+                &::after{
+                    content: "";
+                    background: none;
+                }
+            }
+        }
+    }
+}
+///////////////////
+@media (max-width:480px) {
+
+    main {
+        .bg{height: 200px;}
+        .indicator{padding: 0 20px;}
+
+        .content {
+            @include main-width($w: 850px);
+            /*     padding: 0 240px; */
+            text-align: center;
+            margin-bottom: 100px;
+
+            h2 {
+                color: #447531;
+                font-size: 20px;
+                margin-bottom: 60px;
+            }
+
+            figure {
+
+                /*       margin: 0 auto;
+            padding: 0 10%; */
+                p {
+                    width: 100%;
+                    height: 360px;
+                    margin: 0 auto;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                figcaption {
+                    width: 100%;
+                    /*         margin: 0 auto; */
+                    margin-top: 54px;
+                    
+                    ul {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        li {
+                            width: 50%;
+                            text-align: start;
+                            font-size: 14px;
+                            span {
+                                font-weight: 500;
+                                padding-right: 2%;
+                                color: #4e803b;
+                            }
+                        }
+                    }
+
+                    ul:nth-of-type(1) {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+
+            hr {
+                width: 100%;
+                height: 1px;
+                background: rgba(0, 0, 0, 0.5);
+                margin: 40px 0 40px;
+            }
+
+            .txt {
+                /*       padding: 0 100px; */
+                width: 100%;
+                text-align: left;
+                margin: 0;
+                margin-bottom: 200px;
+                
+                li {
+                    width: 100%;
+
+                    p {
+                        color: #5b5e5f;
+                        margin-bottom: 25px;
+                        letter-spacing: 1px;
+                        line-height: 1.5em;
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .btn_list {
+                @include flex(flex-end);
+
+                a {
+                    border-radius: 10px;
+                    background: #90be45;
+                    width: 70px;
+                    height: 40px;
+                    line-height: 40px;
+                    display: block;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+
+}

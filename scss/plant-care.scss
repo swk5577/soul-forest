@@ -1,0 +1,631 @@
+@import "_reset";
+@import "_mixin";
+@import "_inc";
+
+.bg {
+    position: relative;
+    background-image: url("../img/pots-716579_1920.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    height: 400px;
+    > h2 {
+      @include h2();
+      z-index: 99;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/bottom.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 0%;
+      z-index: 88;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+//////////////////
+.indicator {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding-left: 20px;
+    >ul {
+        @include flex(flex-start, center);
+
+        >li {
+            font-size: 14px;
+            padding-right: 20px;
+            margin-right: 10px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url("../img/icon.png");
+                background-size: 100% 100%;
+                width: 8px;
+                height: 12px;
+                margin-left: 10px;
+            }
+
+            &:nth-last-of-type(1) {
+                color: #90BC43;
+
+                &::after {
+                    content: "";
+                    background: none;
+                }
+            }
+        }
+    }
+}
+@media (min-width:1024px){
+ 
+    ///////////////////
+    
+    .next {
+        margin: 120px auto;
+        display: flex;
+        justify-content: center;
+
+        .numbox {
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+
+                >span {
+                    text-align: center;
+                    display: inline-block;
+                    width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
+                }
+            }
+        }
+
+        button {
+            cursor: pointer;
+            background-color: transparent;
+            color: #58585A;
+            font-size: 16px;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            border: none;
+            margin: 0 5px;
+
+        }
+
+        button:first-of-type,
+        button:last-of-type {
+            width: 45px;
+        }
+
+        button.on {
+            border-radius: 10px;
+            background-color: #90BC43;
+            color: white;
+        }
+    }
+      
+    // 버튼
+    
+    .sub-f{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 32px;
+        }
+    }
+    
+    .inout{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 65px 0;
+
+        input{
+            border-radius: 5px;
+        }
+        input:nth-of-type(1){
+            margin-right: 10px;
+            border: 1px solid #8e8e8f;
+            width: 400px;
+            height: 35px;
+            text-align: center;
+        }
+        input:nth-of-type(2){
+            cursor: pointer;
+            background-color: #90BC43;
+            color: white;
+            width: 60px;
+            height: 35px;
+            border: none;
+        }
+    }
+    
+    .dada_qna{
+        display: flex;
+        justify-content: center;
+        max-width: 1280px;
+        margin: 0 auto;
+        .qna_back{
+            width: 100%;
+                 p{
+                font-size: 22px;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                }
+            .qna_list{
+                display: flex;
+                justify-content: center;
+                ul{
+                    width: 100%;
+                    list-style-type: none;
+                    border-bottom: 1px solid black;
+                    border-top: 1px solid black;
+                 
+                    li{                        
+                        font-size: 20px;
+                        border-bottom: 1px solid #ededed;
+                        .dada2n{
+                            display: none;
+                            background-color: #F6F6F6;
+                            span{
+                                color: #90BC43;
+                            }
+                            h2{
+                                word-break: keep-all;
+                                line-height: 1.7;
+                            }
+                        }
+                        button{
+                            cursor: pointer;
+                            position: relative;
+                            display: flex;
+                            padding: 20px;
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            span{
+                                font-size: 18px;
+                                color: #999;
+                                padding-right: 10px;
+                            }
+                            h2{                             
+                                text-align: left;
+                                font-size: 14px;
+                            }
+                            div{
+                                padding: 10px;
+                                img{ 
+                                    position: absolute; right:20px;
+                                }
+                            }
+                        }
+                       
+                    }
+                    li.active{
+                        button{
+                            span{
+                                font-weight: bold;
+                            }
+                            h2{
+                                color: rgb(61, 61, 61);
+                                font-size: 15px;
+                            }
+                            img{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+    
+                    
+                        }  
+                    }
+            } 
+       
+    
+                
+                }
+            
+    // 아코디언
+}
+@media (min-width:481px) and (max-width:1023px){
+    .bg{height: 200px;}
+    .indicator{padding: 0 20px;}
+    
+    .next {
+        margin: 120px auto;
+        display: flex;
+        justify-content: center;
+
+        .numbox {
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+
+                >span {
+                    text-align: center;
+                    display: inline-block;
+                    width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
+                }
+            }
+        }
+
+        button {
+            cursor: pointer;
+            background-color: transparent;
+            color: #58585A;
+            font-size: 16px;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            border: none;
+            margin: 0 5px;
+
+        }
+
+        button:first-of-type,
+        button:last-of-type {
+            width: 45px;
+        }
+
+        button.on {
+            border-radius: 10px;
+            background-color: #90BC43;
+            color: white;
+        }
+    }
+      
+    // 버튼
+    
+    .sub-f{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 30px;
+        }
+    }
+    
+    .inout{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 65px 0;
+        padding: 0 20px;
+    
+        input{
+            border-radius: 5px;
+        }
+        input:nth-of-type(1){
+            border: 1px solid #8e8e8f;
+            margin-right: 10px;
+            width: 300px;
+            height: 35px;
+            text-align: center;
+        }
+        input:nth-of-type(2){
+            cursor: pointer;
+            background-color: #90BC43;
+            color: white;
+            width: 60px;
+            height: 35px;
+            border: none;
+        }
+    }
+    
+    .dada_qna{
+        display: flex;
+        justify-content: center;
+        .qna_back{
+            width: 100%;
+                 p{
+                font-size: 22px;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                
+            }
+            .qna_list{
+                display: flex;
+                justify-content: center;
+                padding: 0 20px;
+                ul{
+                    width: 100%;
+                    list-style-type: none;
+                    border-bottom: 1px solid black;
+                    border-top: 1px solid black;
+                 
+                    li{
+                        
+                        font-size: 20px;
+                        border-bottom: 1px solid #ededed;
+                        .dada2n{
+                            display: none;
+                            background-color: #F6F6F6;
+                            span{
+                                color: #90BC43;
+                            }
+                            h2{
+                                word-break: keep-all;
+                                line-height: 1.7;
+                            }
+                        }
+                        button{
+                            cursor: pointer;
+                            position: relative;
+                            display: flex;
+                            padding: 20px;
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            span{
+                                font-size: 18px;
+                                color: #999;
+                                padding-right: 10px;
+                            }
+                            h2{                             
+                                text-align: left;
+                                font-size: 14px;
+                            }
+                            div{
+                                padding: 10px;
+                                img{ 
+                                    position: absolute; right:20px;
+                                }
+                            }
+                        }
+                       
+                    }
+                    li.active{
+                        button{
+                            span{
+                                font-weight: bold;
+                            }
+                            h2{
+                                color: rgb(61, 61, 61);
+                                font-size: 15px;
+                            }
+                            >.uu{
+                                font-size: 13px;
+                            }
+                            img{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+    
+                    
+                        }  
+                    }
+            } 
+       
+    
+                
+                }
+            
+    // 아코디언
+}
+@media (max-width:480px){
+    .bg{height: 200px;}
+    .indicator{padding: 0 20px;}
+    
+    .next {
+        margin: 120px auto;
+        display: flex;
+        justify-content: center;
+
+        .numbox {
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+
+                >span {
+                    text-align: center;
+                    display: inline-block;
+                    width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
+                }
+            }
+        }
+
+        button {
+            cursor: pointer;
+            background-color: transparent;
+            color: #58585A;
+            font-size: 16px;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            border: none;
+            margin: 0 5px;
+
+        }
+
+        button:first-of-type,
+        button:last-of-type {
+            width: 45px;
+        }
+
+        button.on {
+            border-radius: 10px;
+            background-color: #90BC43;
+            color: white;
+        }
+    }
+      
+    // 버튼
+    
+    .sub-f{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 28px;
+        }
+    }
+    
+    .inout{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 65px 0;
+        padding: 0 20px;
+       
+        input{
+            border-radius: 5px;
+        }
+        input:nth-of-type(1){
+            border: 1px solid #8e8e8f;
+            margin-right: 10px;
+            width: 200px;
+            height: 35px;
+            text-align: center;
+        }
+        input:nth-of-type(2){
+            cursor: pointer;
+            background-color: #90BC43;
+            color: white;
+            width: 60px;
+            height: 35px;
+            border: none;
+        }
+    }
+    
+    .dada_qna{
+        display: flex;
+        justify-content: center;
+        .qna_back{
+                 p{
+                font-size: 22px;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                
+            }
+            .qna_list{
+                display: flex;
+                justify-content: center;
+                padding: 0 20px;
+                width: 100%;
+                ul{
+                    width: 100%;
+                    list-style-type: none;
+                    border-bottom: 1px solid black;
+                    border-top: 1px solid black;
+                 
+                    li{
+                        width: 100%;
+                        font-size: 20px;
+                        border-bottom: 1px solid #ededed;
+                        .dada2n{
+                            display: none;
+                            background-color: #F6F6F6;
+                            span{
+                                color: #90BC43;
+                            }
+                            h2{
+                                word-break: keep-all;
+                                line-height: 1.7;
+                            }
+                        }
+                        button{
+                            cursor: pointer;
+                            position: relative;
+                            display: flex;
+                            padding: 20px;
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            span{
+                                font-size: 18px;
+                                color: #999;
+                                padding-right: 10px;
+                            }
+                            h2{
+                                width: 100%;
+                                text-align: left;
+                                font-size: 14px;
+                            }
+                            div{
+                                padding: 10px;
+                                img{ 
+                                    position: absolute; right:20px;
+                                }
+                            }
+                        }
+                       
+                    }
+                    li.active{
+                        button{
+                            span{
+                                font-weight: bold;
+                            }
+                            h2{
+                                color: rgb(61, 61, 61);
+                                font-size: 15px;
+                            }
+                            img{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+    
+                    
+                        }  
+                    }
+            } 
+       
+    
+                
+                }
+            
+    // 아코디언
+}
+@import "t-inc";
+@import "m-inc";
+
+

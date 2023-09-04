@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/guide.css" />
+    <script defer src="./js/tap.js"></script>
+    <script defer src="./js/btn.js"></script>
+    <script defer src="./js/inc.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon"> <!--타이틀아이콘-->
+    <title>이용안내</title>
+  </head>
+  <body>
+    <main>
+      <div class="bg">
+        <h2>식물원 시설</h2>
+      </div>
+
+      <div class="indicator">
+        <ul>
+          <li>식물원 시설</li>
+          <li>이용안내</li>
+        </ul>
+      </div>
+
+      <div class="tab">
+        <ul class="nav">
+          <li class="nav_on">유료이용</li>
+          <li class="nav_off" >유의사항</li>
+        </ul>
+
+        <div class="tabct">
+          <div class="content1">
+            <div class="map">
+              <img src="./img/map.png" />
+            </div>
+            <hr />
+            <div class="timeinfotxt">이용시간 안내</div>
+            <ul class="timeinfo">
+              <li>
+                <figure>
+                  <img src="./img/info_1.png" />
+                  <figcaption>
+                    <b>평시</b>
+                    <p>3월 - 10월</p>
+                  </figcaption>
+                </figure>
+                <div>
+                  <p>09:30 - 18:00</p>
+                  <p>17:00 매표마감</p>
+                </div>
+              </li>
+              <li>
+                <figure>
+                  <img src="./img/info_2.png" />
+                  <figcaption>
+                    <b>동절기</b>
+                    <p>11월 - 2월</p>
+                  </figcaption>
+                </figure>
+                <div>
+                  <p>09:30 - 18:00</p>
+                  <p>16:00 매표마감</p>
+                </div>
+              </li>
+            </ul>
+            <div class="timenotice">
+              <p>매주 월요일 휴관</p>
+              <p>관람 마감 한 시간 전 매표 마감</p>
+            </div>
+            <hr />
+
+            <div id="tab_wrap">
+              <a class="money">이용요금</a>
+              <a class="
+              Discount_target">이용료 면제 및 감면 대상</a>
+            </div>
+
+            <div id="table">
+              <table class="basic">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>
+                      성인<br />
+                      <p>만 19세 - 만 64세</p>
+                    </th>
+                    <th>
+                      청소년<br />
+                      <p>만 13세 - 만 18세</p>
+                    </th>
+                    <th>
+                      어린이<br />
+                      <p>만 6세 - 만 12세</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>개인</th>
+                    <td>5,000</td>
+                    <td>3,000</td>
+                    <td>4,000</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      단체<br />
+                      <p>(30인 이상)</p>
+                    </th>
+                    <td>3,500</td>
+                    <td>2,100</td>
+                    <td>1,400</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th id="won">단위 원</th>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="discount">
+                <tbody>
+                  <tr>
+                    <th>단체할인</th>
+                    <td>
+                      30인 이상 단체<br />
+                      <p>(결제인 기준)</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>무료입장</th>
+                    <td id="td2">
+                      만 5세 이하 유아(만6세미만)<br />
+                      만 65세 이상<br />
+                      장애의 정도가 심한 장애인(1~3급 장애인) :보호자 1인
+                      포함<br />
+                      장애의 정도가 심하지 않은 장애인(4급~6급) : 본인<br />
+                      국가유공자<br />
+                      참전용사증 소지자<br />
+                      의상자·의사자 유족 및 의상자 가족<br />
+                      서울특별시 명예시민증 소지자<br />
+                      기초수급자<br />
+                      국군의 날 군인<br />
+                      어린이날 아동
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="notice">
+              <div class="basic_notice">
+                <p>입장권은 당일에 한하여 유효함</p>
+                <p>
+                  온실 및 주제정원에 한하여 입장권 구매 (열린숲, 호수원, 습지원,
+                  상시 무료개방)
+                </p>
+              </div>
+              <div class="discount_notice">
+                <p>할인 및 무료입장객은 신분증 및 확인을 위한 증빙자료 필요</p>
+                <p>다둥이 행복카드 소지자</p>
+                <p>
+                  서울시에서 발급하는 다자녀 가정 지원카드 소지자 또는
+                  지원카드에 등재된 가족, 본인확인 후 면제 적용
+                </p>
+                <div>면제 및 할인대상 증빙자료 지참 안내</div>
+                <b>개별 방문시</b>
+                <p>
+                  65세 이상 및 국가유공자, 장애인 등 면제대상 : 본인 신분증
+                </p>
+                <p>
+                  만 6세 미만 영·유아 면제대상 : 증빙서류(건강보험증, 가족관계
+                  증명서, 여권 등)
+                </p>
+                <p>초·중·고등학생 : 본인 학생증</p>
+                <b>개별 방문시</b>
+                <p>
+                  65세 이상: 개개인의 신분증을 지참하여 인솔자가 수합 후
+                  매표소에서 확인
+                </p>
+                <p id="p1">※ 일괄 작성된 명단은 인정해 드리기 어렵습니다</p>
+                <p>
+                  만 6세 미만 영·유아 면제대상 : 증빙서류(유치원 또는 어린이집
+                  증빙자료)
+                </p>
+                <p id="p2">※ 기관 직인이 포함된 인가증 및 영·유아 명단</p>
+                <p>
+                  만 6세 미만 영·유아 면제대상 : 증빙서류(유치원 또는 어린이집
+                  증빙자료)
+                </p>
+                <p>
+                  초·중·고등학생 : 선생님(인솔자)소속 학교 증빙자료 확인으로
+                  방문한 학생들의 신분증을 대체
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content2">
+            <article>
+              <div>식물원 내 유의사항(열린숲, 호수원 등 야외공간)</div>
+              <ul id="qq">
+                <li>
+                  <figure>
+                    <img src="./img/img_note01_list01.png" />
+                    <figcaption>
+                      <p>주류, 버너, 텐트, 그늘막취사 등</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note01_list02.png" />
+                    <figcaption>
+                      <p>자전거, 인라인 등</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note01_list03.png" />
+                    <figcaption>
+                      <p>기타 위협을 줄 수 있는 물품</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note01_list04.png" />
+                    <figcaption>
+                      <p>흡연</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note01_list05.png" />
+                    <figcaption>
+                      <p>확성기, 블루투스 마이크 등 방송기기</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note01_list06.png" />
+                    <figcaption>
+                      <p>반려동물 목줄 착용 및 배변봉투 필수</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </article>
+
+            <article>
+              <div id="dd">온실 및 주제원 금지사항</div>
+              <ul id="ww">
+                <li>
+                  <figure>
+                    <img src="./img/img_note02_list01.png" />
+                    <figcaption>
+                      <p>식물 및 토석 채집·채취</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note02_list02.png" />
+                    <figcaption>
+                      <p>식재구역 및 관람동선 외 지역 출입</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note02_list03.png" />
+                    <figcaption>
+                      <p>카메라 삼각대 반입</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note02_list04.png" />
+                    <figcaption>
+                      <p>음식물 반입 및 섭취</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note02_list05.png" />
+                    <figcaption>
+                      <p>반려동물 출입 (안내견 제외)</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./img/img_note02_list06.png" />
+                    <figcaption>
+                      <p>퀵보드 (유아용 소형 탑승기구 등)</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </article>
+            <div id="Notice">
+              <p>※ 관람객 부주의로 인한 사고에 대해서는 책임지지 않습니다.</p>
+              <p>
+                ※ 공원녹지법, 수목원정원법 및 동물보호법 관련 조항 위반시
+                처벌받을 수 있습니다.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>

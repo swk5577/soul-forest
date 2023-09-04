@@ -1,0 +1,89 @@
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+	font-family: NotoSansKR-Black;
+	src: url('../font/Noto_Sans_KR/NotoSansKR-Black.ttf');	
+}
+
+@font-face {
+	font-family: NotoSansKR-Regular;
+	src: url('../font/Noto_Sans_KR/NotoSansKR-Regular.ttf');
+}
+
+@font-face {
+	font-family: NotoSansKR-Medium;
+	src: url('../font/Noto_Sans_KR/NotoSansKR-Medium.ttf');
+}
+
+@font-face {
+	font-family: NotoSansKR-Bold;
+	src: url('../font/Noto_Sans_KR/NotoSansKR-Bold.ttf');
+}
+
+
+@font-face {
+	font-family: NotoSans-Bold;
+	src: url('../font/Noto_Sans/NotoSans-Bold.ttf');
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 16px;
+    text-decoration: none;
+	vertical-align: baseline;
+    color: #58585A;
+	// font-family: 'NotoSansKR-Regular';
+	font-family: 'NotoSansKR-Medium';
+	list-style: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+* {
+	word-break: keep-all;
+    box-sizing: border-box;
+}
+body {
+	line-height: 1;
+	min-width: 380px;
+}
+// ol, ul {
+
+// }
+
+img{
+	display: block;
+}
+
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+

@@ -1,0 +1,80 @@
+@mixin main-width($w: 1320px, $p:0 20px) {
+    margin: 0 auto;
+    max-width: $w;
+    padding: $p;
+    @content;
+}
+
+@mixin flex($x: flex-start, $y: flex-end) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+    @content;
+}
+
+@mixin h2(){
+    color: white;
+    position: absolute;
+    font-size: 32px;
+    font-weight: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin h3(){
+    margin-bottom: 90px;
+    font-size: 32px;
+    position: relative;
+    line-height: 1.5;
+    &::after{
+        content: '';
+        background-image: url('../img/h3-bg.png');
+        background-size: 100% 100%;
+        background-position: center;
+        width: 210px;
+        height: 200px;
+        position: absolute;
+        top: -100px;
+        left: 0;
+        z-index: -1;
+        transform: rotate(5deg);
+    }
+    >span{
+        font-size: 32px;
+        color: #4E813B;
+    }
+}
+
+@mixin bg(){
+    position: absolute;
+    content: '';
+    background-image: url("../img/bottom.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -0.2%;
+}
+
+@mixin tab() {
+    .tab {
+
+        .tabct>* {
+            display: none;
+
+            &.on {
+                display: block;
+            }
+        }
+
+    }
+}
+
+ @mixin font($a,$b){
+    font-family: 'Noto Sans KR';
+    font-weight: $a;
+    font-size: $c;
+ }

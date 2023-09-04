@@ -1,0 +1,143 @@
+@import "_reset";
+@import "_mixin";
+.bg {
+    position: relative;
+    background-image: url("../img/grass-1784140_1920_2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    height: 400px;
+    > h2 {
+      @include h2();
+      z-index: 99;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/bottom.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 0%;
+      z-index: 88;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+//////////////////
+.indicator{
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    >ul{
+        @include flex(flex-start,center);
+        >li{
+            font-size: 14px;
+            padding-right: 20px;
+            margin-right: 10px;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url("../img/icon.png");
+                background-size: 100% 100%;
+                width: 8px;
+                height: 12px;
+                margin-left: 10px;
+            }
+            &:nth-last-of-type(1){
+                color: #90BC43;
+                &::after{
+                    content: "";
+                    background: none;
+                }
+            }
+        }
+    }
+}
+///////////////////
+@media (min-width:481px) and (max-width:1023px){
+
+    .main{
+        .bg{height: 200px;}
+        .indicator{padding: 0 20px;}
+    
+        .con{
+            @include main-width(){
+                margin-bottom: 50px
+            };
+            padding: 0px 30px;
+            >.title{
+                @include flex(center,center);
+                margin-bottom: 50px;
+            }
+    
+            .table-box{
+                max-width: 950px;
+                margin: 0 auto;
+                border: 1px solid #90BC43;
+                border-radius: 10px;
+                >table{
+                    width: 100%;
+                    border-collapse: separate;
+                    >tbody{
+                        >tr{
+    
+                            >th{             
+                                border-top: 1px solid white;            
+                                border-bottom: 1px solid white;            
+                                vertical-align: middle;
+                                width: 20%;
+                                height: 50px;
+                                background-color: #90BC43;
+                                color: white;
+                                font-weight: normal;
+                                padding-left: 0px;
+                                font-size: 14px;
+                            }
+                            .th-top{
+                                border-radius: 10px 0px 0px 0px;
+                                border-top: 1px solid #90BC43;
+                            }
+                            .th-bottom{
+                                border-radius: 0px 0px 0px 10px;
+                                border-bottom: 1px solid #90BC43;
+                            }
+                            >td{
+                                border-top: 1px solid #90BC43;
+                                vertical-align: middle;
+                                width: 20%;
+                                padding-left: 20px;
+                                font-size: 14px;
+                            }
+                            .td-top{
+                                border-top: none;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            >a{
+                width: 110px;
+                height: 40px;
+                margin: 80px auto;
+                line-height: 40px;
+                display: block;
+                text-align: center;
+                background-color: #90BC43;
+                border-radius: 20px;
+                color: white;
+            }
+        }
+    
+    
+    }
+
+}

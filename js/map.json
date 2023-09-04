@@ -1,0 +1,36 @@
+{
+    "1":[
+        {"img":"./img/qkdanswk.jpg","name":"방문자센터"},
+        {"img":"./img/wlsdlqrhkdwkd.jpg","name":"진입광장"},
+        {"img":"./img/wlsdlqrhkdwkd2.jpg","name":"진입광장"},
+        {"img":"./img/wkselakekd.jpg","name":"잔디마당"},
+        {"img":"./img/wkselakekd2.jpg","name":"잔디마당"},
+        {"img":"./img/tnvansghkdnjs.jpg","name":"숲문화원"},
+        {"img":"./img/tnvansghkdnjs2.jpg","name":"숲문화원"}
+    ],
+    "2":[
+        {"img":"./img/wnwpwjddnjs.jpg","name":"주제정원"},
+        {"img":"./img/wnwpwjddnjs2.jpg","name":"주제정원"},
+        {"img":"./img/wnwpwjddnjs3.jpg","name":"주제정원"},
+        {"img":"./img/dhstlf.jpg","name":"온실"},
+        {"img":"./img/dhstlf2.jpg","name":"온실"},
+        {"img":"./img/dhstlf3.jpg","name":"온실"},
+        {"img":"./img/dhstlf4.jpg","name":"온실"},
+        {"img":"./img/akrhr.jpg","name":"마곡문화관"},
+        {"img":"./img/akrhr2.jpg","name":"마곡문화관"}
+    ],
+    "3":[
+        {"img":"./img/tnqusrkfh.jpg","name":"수변가로"},
+        {"img":"./img/tnqusrkfh2.jpg","name":"수변가로"},
+        {"img":"./img/anfrk.jpg","name":"물가쉼터"},
+        {"img":"./img/tmqwlrhksckf.jpg","name":"습지관찰데크"},
+        {"img":"./img/tmqwlrhksckf2.jpg","name":"습지관찰데크"}
+    ],
+    "4":[
+        {"img":"./img/wjfbwl.jpg","name":"저류지"},
+        {"img":"./img/gksrkdwjsakd.jpg","name":"한강전망데크"},
+        {"img":"./img/gksrkdwjsakd2.jpg","name":"한강전망데크"},
+        {"img":"./img/dbtnwl.jpg","name":"유수지"},
+        {"img":"./img/dbtnwl2.jpg","name":"유수지"}
+    ]
+}

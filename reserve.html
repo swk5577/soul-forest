@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material.css">
+    <link rel="stylesheet" href="./css/reserve.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script defer src="./js/reserve.js"></script>
+    <script defer src="./js/inc.js"></script>
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon"> <!--타이틀아이콘-->
+    <title>체험신청</title>
+</head>
+
+<body>
+
+    <main class="main">
+
+        <div class="bg">
+            <h2>참여하기</h2>
+        </div>
+
+        <div class="indicator">
+            <ul>
+                <li>
+                    참여하기
+                </li>
+                <li>
+                    교육프로그램
+                </li>
+                <li>
+                    체험신청
+                </li>
+            </ul>
+        </div>
+
+        <section class="reserve-box">
+
+            <div class="reserve-con01">
+                <div class="left">
+                    <!-- <p>체험프로그램</p>
+                    <figure>
+                        <img src="./img/exhibition.png">
+                        <figcaption>
+                            <청소년 생태모니터링>
+                        </figcaption>
+                    </figure> -->
+                </div>
+               
+                <div class="right">
+                    <p>날짜선택</p>
+                    <div class="col-6">
+                        <input class="form-control" id="birth" pattern="\d{4}-\d{2}-\d{2}" placeholder=""
+                            required th:field="*{birth}" type="text" value="">
+                    </div>
+                </div> 
+            </div>
+
+            <div class="reserve-con02">
+                <p  class="title">회차선택</p>
+                <div class="time-box">
+
+                </div>
+            </div>
+
+            <div class="reserve-con03">
+                <p class="title">예약자(대표자)정보</p>
+                <div class="reserve-info">
+                    <form class="gg" action="">
+                        <input id="name" type="text" placeholder="이름">
+                        <input id="birthday" type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="생년월일">
+                        <input id="tel" type="tel" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="전화번호">
+                    </form>
+                </div>
+            </div>
+
+            <div class="reserve-con04">
+                <p class="title"></p>
+                <div class="reserve-person-box">
+                    <ul>
+                        <li>
+                            <div class="left">
+                                <p>성인(만18세이상 ~ 만64세)</p>
+                            </div>
+                            <div class="right">
+                                <!-- <input id="a1" type="checkbox">
+                                <label for="a1"><span>1</span></label> -->
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="left">
+                                <p>청소년(만13세~만18세)</p>
+                            </div>
+                            <div class="right">
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="left">
+                                <p>유아(만6세~만12세)</p>
+                            </div>
+                            <div class="right">
+  
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reserve-con05">
+                <div class="title">약관동의</div>
+                <div class="terms-box">
+                    <div class="terms">
+                        <input id="terms-check" type="checkbox">
+                        <label for="terms-check">                        <p><span>[필수]</span>개인정보 수집 및 이용동의</p></label>
+
+                    </div>
+                    <div class="terms-text-box">
+                        <div class="terms-text-con">
+                            <div class="text">
+                                    네이버 서비스 및 제휴 이벤트・혜택 등의 정보를 휴대전화(네이버앱 알림 또는 문자), 이메일로 받을 수 있습니다. 일부 서비스(별개의 회원 체계 운영, 네이버 가입 후 추가 가입하는 서비스 등)의 경우, 수신에 대해 별도로 안내드리며 동의를 구합니다.
+                                    네이버 서비스 및 제휴 이벤트・혜택 등의 정보를 휴대전화(네이버앱 알림 또는 문자), 이메일로 받을 수 있습니다. 일부 서비스(별개의 회원 체계 운영, 네이버 가입 후 추가 가입하는 서비스 등)의 경우, 수신에 대해 별도로 안내드리며 동의를 구합니다.
+                                    네이버 서비스 및 제휴 이벤트・혜택 등의 정보를 휴대전화(네이버앱 알림 또는 문자), 이메일로 받을 수 있습니다. 일부 서비스(별개의 회원 체계 운영, 네이버 가입 후 추가 가입하는 서비스 등)의 경우, 수신에 대해 별도로 안내드리며 동의를 구합니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="reserve-btn-box">
+                <a>예약하기</a>
+                <!-- <a href="./reserve-check.html">예약하기</a> -->
+            </div>
+            
+        </section>
+
+    </main>
+
+
+
+</body>
+
+</html>

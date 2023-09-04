@@ -1,0 +1,300 @@
+@import "_reset";
+@import "_mixin";
+@import "_inc";
+.bg {
+    position: relative;
+    background-image: url("../img/architecture-1367903_1920.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    height: 400px;
+
+    >h2 {
+        @include h2();
+        z-index: 99;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/bottom.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0%;
+        z-index: 88;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.indicator {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding: 0 20px;
+    >ul {
+        @include flex(flex-start, center);
+
+        >li {
+            font-size: 14px;
+            padding-right: 20px;
+            margin-right: 10px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url("../img/icon.png");
+                background-size: 100% 100%;
+                width: 8px;
+                height: 12px;
+                margin-left: 10px;
+            }
+
+            &:nth-last-of-type(1) {
+                color: #90BC43;
+
+                &::after {
+                    content: "";
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:481px) {
+    main {
+        @include tab();
+        margin-bottom: 200px;
+
+        figcaption{
+            padding: 20px 0;
+            p{
+                font-size: 16px;
+            }
+        }
+
+        .conten {
+            @include main-width();
+
+            hr {
+                padding: 0;
+                margin: 0 auto;
+            }
+
+            .intad {
+                text-align: center;
+                margin-bottom: 65px;
+
+                a {
+                    font-size: 20px;
+                    padding: 0 50px;
+                    cursor: pointer;
+                    &.active {
+                        position: relative;
+                        color: #4E813B;
+   
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            bottom: -10px;
+                            left: 19%;
+                            width: 60%;
+                            height: 3px;
+                            background-color: #4E813B;
+                        }
+
+                    }
+                }
+            }
+
+            .swiper {
+                display: none;
+
+                .swiper-slide {
+                    position: relative;
+
+                    >img {
+                        position: absolute;
+                        width: 50%;
+                        height: 35%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%)
+                    }
+                }
+
+                .closs {
+                    font-size: 50px;
+                    position: fixed;
+                    top: 5%;
+                    right: 5%;
+                    color: white;
+                    z-index: 10;
+
+                }
+            }
+
+            .mapclick {
+                display: block;
+                position: fixed;
+                z-index: 200;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+
+                .name {
+                    position: fixed;
+                    bottom: 15%;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    >span {
+                        padding: 20px;
+                        color: white;
+
+                        &.active {
+                            color: #ace155;
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+
+
+
+
+        .incon {
+            .tower {
+                display: flex;
+                border-bottom: 1px solid black;
+
+                >li {
+                    padding: 2% 2%;
+                    cursor: pointer;
+                    &.active {
+                        position: relative;
+                        color: #4E813B;
+                        font-size: 18px;
+                        font-weight: 600;
+
+                    }
+                }
+
+            }
+
+            .map.on {
+                display: flex;
+
+                &>:nth-child(1) {
+                    flex: 1 0;
+                }
+
+                &>:nth-child(2) {
+                    flex: 4 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    p {
+                        width: 100%;
+                        padding: 5% 0%;
+                    }
+
+                    img {
+                        padding-left: 5%;
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            .floor {
+                border-right: 1px solid black;
+
+                >* {
+                    border-bottom: 1px solid black;
+                    padding: 10% 5%;
+                    text-align: center;
+                    cursor: pointer;
+                    &.active {
+                        position: relative;
+                        color: white;
+                        background-color: #90BE45;
+                        font-weight: 600;
+
+                    }
+                }
+
+            }
+        }
+
+
+
+        .map {
+            position: relative;
+
+            &.outmap {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .map_hover {
+                position: absolute;
+                display: none;
+                left: 0;
+                top: 0;
+
+                &:hover {
+                    display: block;
+                }
+            }
+        }
+
+        .icon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 3%;
+
+                p {
+
+                    &:nth-of-type(1) {
+                        width: 50px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import "_t-inc";
+@import "_m-inc";
+@import "_in_mova";

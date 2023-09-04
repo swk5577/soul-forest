@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script defer src="./js/inc.js"></script>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/weather.js"></script>
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon"> <!--타이틀아이콘-->
+    <title>서울식물원</title>
+</head>
+
+
+
+<body>
+
+    <main class="main">
+
+        <div class="swiper mainSwiper">
+            <ul class="swiper-wrapper">
+
+
+            </ul>
+
+            <div class="bottom-con">
+                <div class="weather-box">
+                    <div class="weather-con">
+                        <div class="left">
+                            <img src="" alt="">
+                        </div>
+                        <div class="right">
+                            <p class="today">
+                                <span>
+                                    오늘의 날씨
+                                </span>
+                            </p>
+                            <div class="weather-text">
+                                <span class="sky"></span>
+                                <span class="tmp"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-box">
+                    <a target="_blank" href="./guide.pdf">안내도</a>
+                    <a target="_blank" href="./eng-guide.pdf">English Guide</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="use-info-box">
+            <div class="use">
+                <ul class="use-info-tab">
+                    <div class="custom-checkbox">
+                        <input id="status" type="checkbox" name="status">
+                        <label for="status">
+                            <div class="status-switch" data-unchecked="주제원이용요금" data-checked="관람시간안내">
+                            </div>
+                        </label>
+                    </div>
+                </ul>
+            </div>
+            <div class="use-info">
+                <ul class="use-con-tab">
+                    <li>
+                        <div class="price">
+                            <div class="left">
+                                <p class="title">주제원 이용요금</p>
+                                <p class="location">(주제정원,온실)</p>
+                                <a href="./guide.html">바로가기</a>
+                            </div>
+                            <div class="right">
+                                <div class="user-division">
+                                    <span>개인,대인 5,000원</span>
+                                    <span>청소년 3,000원</span>
+                                    <span>소인 2,000원</span>
+                                </div>
+                                <p>단체(30인이상) 30%할인</p>
+                                <p class="issue">*22.1.1.부터 제로페이 할인 중단</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="time">
+                            <div class="left">
+                                <p class="title">관람시간안내</p>
+                                <p class="location">주제원(주제정원,온실)</p>
+                                <p>*월요일 휴관</p>
+                            </div>
+                            <div class="right">
+                                <div class="peacetime">
+                                    <p>평시(3월~10월)</p>
+                                    <p>09:30~18:00</p>
+                                    <p>17:00 매표마감</p>
+                                </div>
+                                <div class="winter-season">
+                                    <p>동절기(11월~2월)</p>
+                                    <p>09:30~18:00</p>
+                                    <p>16:00 매표마감</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="mobile-quick">
+            <ul>
+
+                <li>
+                    <a href="./guide.html">
+                        <div class="mobile-con">
+                            <div class="img-box">
+                                <img src="./img/mobile-quick-icon01.png" alt="">
+                            </div>
+                            <div class="txt-box">
+                                <span>이용안내</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./Story.html">
+                        <div class="mobile-con">
+                            <div class="img-box">
+                                <img src="./img/mobile-quick-icon02.png" alt="">
+                            </div>
+                            <div class="txt-box">
+                                <span>오시는 길</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./seedlibrary.html">
+                        <div class="mobile-con">
+                            <div class="img-box">
+                                <img src="./img/mobile-quick-icon03.png" alt="">
+                            </div>
+                            <div class="txt-box">
+                                <span>씨앗도서관</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./program.html">
+                        <div class="mobile-con">
+                            <div class="img-box">
+                                <img src="./img/mobile-quick-icon04.png" alt="">
+                            </div>
+                            <div class="txt-box">
+                                <span>체험신청</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./notice.html">
+                        <div class="mobile-con">
+                            <div class="img-box">
+                                <img src="./img/mobile-quick-icon05.png" alt="">
+                            </div>
+                            <div class="txt-box">
+                                <span>공지사항</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="news">
+            <h3><span>서울식물원</span>의 새소식</h3>
+            <div class="news-con">
+
+                <div class="exhibition-news">
+                    <p>전시소식</p>
+                    <p class="mobile">
+                        <span>서울식물원</span> 전시안내
+                    </p>
+                    <div class="exhibition-con">
+                        <a href="./Exhibit-detail.html">
+                            <img src="./img/exhibition.png">
+                            <div class="screen">
+                                <span>더보기</span>
+                            </div>
+                        </a>
+                        <div class="mobile-exhibition-news">
+                            <div class="mobile-exhibition-news-con">
+                                <div class="txt-box">
+                                    <p class="title">
+                                        빛이 깨울때
+                                    </p>
+                                    <p class="writer">
+                                        천대광, 사일로랩
+                                    </p>
+                                    <p class="date">
+                                        2023-07-20 ~2023-08-22
+                                    </p>
+                                </div>
+                                <a href="./Exhibit-detail.html">더보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="garden-news">
+                    <p>식물원 소식</p>
+                    <p class="mobile">
+                        <span>서울식물원</span> 새소식
+                    </p>
+                    <div class="swiper garden-slide">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="garden-con">
+                                    <a href="./notice-detail.html">
+                                        <img src="./img/garden.png">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="garden-con">
+                                    <a href="./notice-detail.html">
+                                        <img src="./img/alarm01.png">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="garden-con">
+                                    <a href="./notice-detail.html">
+                                        <img src="./img/alarm02.png">
+                                    </a>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="notice-box">
+                    <div>
+                        <ul class="notice-tab">
+                            <li>
+                                <a>
+                                    공지사항
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    채용안내
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="./notice.html">
+                            +
+                        </a>
+                    </div>
+
+                    <div class="notice-con-box">
+                        <ul class="notice-con-tab">
+                            <li>
+                                <div class="notice-con">
+                                    <a href="./notice-detail.html">
+                                        <span class="title">서울식물원 온실 주제정원 전시 "식물여행"</span>
+                                        <span class="con">서울식물원에서는 '식물여행'을...</span>
+                                        <span class="time">2023-08-04</span>
+                                    </a>
+                                </div>
+                                <div class="notice-con">
+                                    <a href="./notice-detail.html">
+                                        <span class="title">서울식물원 물놀이터 운영(휴장) 안내</span>
+                                        <span class="con">서울식물원 물놀이터 휴장...</span>
+                                        <span class="time">2023-08-22</span>
+                                    </a>
+                                </div>
+                                <div class="notice-con">
+                                    <a href="./notice-detail.html">
+                                        <span class="title">식물문화센터 실내조경 공사 안내</span>
+                                        <span class="con">실내조경 공사 안내...</span>
+                                        <span class="time">2023-08-21</span>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="notice-con">
+                                    <a href="./notice-detail.html">
+                                        <span class="title">서울식물원 공무직(시설청소원)채용시험 공고</span>
+                                        <span class="con">보다 자세한 사항은 공고문...</span>
+                                        <span class="time">2023-08-13</span>
+                                    </a>
+                                </div>
+                                <div class="notice-con">
+                                    <a href="./notice-detail.html">
+                                        <span class="title">서울식물원 공무직(시설청소원)채용시험 공고</span>
+                                        <span class="con">보다 자세한 사항은 공고문...</span>
+                                        <span class="time">2023-08-13</span>
+                                    </a>
+                                </div>
+                                <div class="notice-con">
+                                    <a href="./notice-detail.html">
+                                        <span class="title">서울식물원 공무직(시설청소원)채용시험 공고</span>
+                                        <span class="con">보다 자세한 사항은 공고문...</span>
+                                        <span class="time">2023-08-13</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="course-box">
+            <h3>서울식물원 <span>추천코스</span>로<br>
+                어디서부터갈지 고민은 끝! 더욱 즐겁게 관람해보세요!
+            </h3>
+
+            <p class="mobile">
+                <span>서울식물원</span> 추천코스
+            </p>
+
+            <div class="course-con">
+                <div class="left">
+                    <img src="./img/lin_children.png" alt="">
+                </div>
+                <div class="left">
+                    <img src="./img/lin_cup.png" alt="">
+                </div>
+                <div class="left">
+                    <img src="./img/lin_hill.png" alt="">
+                </div>
+
+                <div class="right">
+
+                    <div class="course-nav">
+                        <ul>
+                            <li>가족 추천코스</li>
+                            <li>연인 추천코스</li>
+                            <li>힐링 추천코스</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-list-con">
+                        <p>
+                            이 코스는 숲문화원과 주제원을 지나 어린이정원으로가는
+                            가볍게 산책하기 좋은 코스입니다.
+                        </p>
+
+                        <div class="course-list-nav">
+                            <ul>
+                                <li class="family-before" data-img="./img/start.png" data-color="#F5B515">출발</li>
+                                <li class="family-before" data-img="./img/family1.jpg" data-color="#F5B515">초지원</li>
+                                <li class="family-before" data-img="./img/family2.jpg" data-color="#F5B515">숲문화원</li>
+                                <li class="family-before" data-img="./img/family3.jpg" data-color="#F5B515">주제정원</li>
+                                <li class="family-before" data-img="./img/family4.jpg" data-color="#F5B515">온실</li>
+                            </ul>
+                        </div>
+
+                        <div class="course-img-list">
+                            <ul>
+                                <li class="qwe2"><img src="./img/start.png" alt=""></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <div class="course-list-con">
+                        <p>
+                            눈은 즐겁게 몸은 가볍고 편안하게! 주로 꽃들을 즐기고 사진을 남기기 좋은 코스입니다.
+                            이 코스는 숲문화원과 아이리스원을지나 온실로 이어집입니다.
+                        </p>
+
+                        <div class="course-list-nav">
+                            <ul>
+                                <li class="couple-before" data-img="./img/start.png" data-color="rgb(255, 116, 186)">출발</li>
+                                <li class="couple-before" data-img="./img/couple1.jpg" data-color="rgb(255, 116, 186)">아이리스원</li>
+                                <li class="couple-before" data-img="./img/couple2.jpg" data-color="rgb(255, 116, 186)">물가가로수길</li>
+                                <li class="couple-before" data-img="./img/couple3.jpg" data-color="rgb(255, 116, 186)">마곡문화원</li>
+                                <li class="couple-before" data-img="./img/couple4.jpg" data-color="rgb(255, 116, 186)">온실</li>
+                            </ul>
+                        </div>
+
+                        <div class="course-img-list">
+                            <ul>
+                                <li class="qwe2"><img src="./img/start.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="course-list-con">
+                        <p>
+                            물가를 거닐며 자연에 피어난 꽃과 나무를 즐길수 있는 코스 입니다
+                            이 코스는 수변가로를 거닐며 분수를지나 한강전망타워까지 이어집입니다.
+                        </p>
+
+                        <div class="course-list-nav">
+                            <ul>
+                                <li class="hill-before" data-img="./img/start.png" data-color="rgb(179, 116, 255)">출발</li>
+                                <li class="hill-before" data-img="./img/hill1.jpg" data-color="rgb(179, 116, 255)">수변가로</li>
+                                <li class="hill-before" data-img="./img/hill2.jpg" data-color="rgb(179, 116, 255)">분수</li>
+                                <li class="hill-before" data-img="./img/hill3.jpg" data-color="rgb(179, 116, 255)">저류지</li>
+                                <li class="hill-before" data-img="./img/hill4.jpg" data-color="rgb(179, 116, 255)">한강전망타워</li>
+                            </ul>
+                        </div>
+
+                        <div class="course-img-list">
+                            <ul>
+                                <li class="qwe2"><img src="./img/start.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section class="experience-box">
+            <h3>
+                <span>삶</span>을 풍요롭게 해 줄 다양한 식물,<br>
+                <span>식물문화 교육 프로그램</span>을 만나보세요!
+            </h3>
+            <p class="mobile">
+                <span>서울식물원</span> 교육프로그램
+            </p>
+            <div class="experience-list">
+                <div class="swiper experSwiper">
+                    <ul class="swiper-wrapper">
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+</body>
+
+</html>

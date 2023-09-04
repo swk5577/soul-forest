@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/in_out.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    <script defer src="./js/inc.js"></script>
+    <script defer src="./js/map.js"></script>
+    <script defer src="./js/tap2.js"></script>
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon"> <!--타이틀아이콘-->
+    <title>시설안내</title>
+</head>
+
+<body>
+    <main>
+        <div class="bg">
+            <h2>식물원 시설</h2>
+        </div>
+
+        <div class="indicator">
+            <ul>
+                <li>
+                    식물원 시설
+                </li>
+                <li>
+                    시설안내
+                </li>
+            </ul>
+        </div>
+
+        <div class="conten tab">
+            <div class="intad nav">
+                <a data-name="외부">외부시설</a>
+                <a data-name="내부">내부시설</a>
+            </div>
+
+
+            <div class="tabct">
+                <div class="outcon" data-name="외부">
+                    <figure>
+                        <div class="outmap map">
+                            <img class="map_hover" src="./img/tmqwldnjs.svg" name="4" width=1280 height=905 usemap="#maphover">
+
+                            <img class="map_hover" src="./img/ghtndnjs.svg" name="3" width=1280 height=905 usemap="#maphover">
+                            <img class="map_hover" src="./img/wnwpdnjs.svg" name="2" width=1280 height=905 usemap="#maphover">
+                            <img class="map_hover" src="./img/dufflstnv.svg" name="1" width=1280 height=905 usemap="#maphover">
+                            <img src="./img/dkssowleh.svg" alt="" width=1280 height=905 usemap="#maphover">
+                            <map name="maphover">
+                                <area alt="1" title="열린숲" href="#"
+                                    coords="209,382,28,537,396,869,623,697,548,648,517,483,476,452,305,450"
+                                    shape="poly">
+
+                                <area alt="2" title="주제원" href="#"
+                                    coords="537,536,552,656,652,680,944,571,952,537,876,450,1021,400,957,313,866,261,869,346,796,433,686,481,644,512"
+                                    shape="poly">
+
+                                <area alt="3" title="호수원" href="#"
+                                    coords="708,154,419,432,557,524,643,510,792,431,874,337,870,254" shape="poly">
+
+                                <area alt="4" title="습지원" href="#" coords="796,188,850,120,1106,36,1236,145,918,270"
+                                    shape="poly">
+
+
+                            </map>
+                        </div>
+
+                        <figcaption>
+                            <p>지역 미리보기가 있어요</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <!-- <div class="swiper-slide"><img src="./img/exhibition.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./img/exhibition.png" alt=""></div> -->
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="closs"> X</div>
+                            <div class="name">
+                                <span>글자</span><span>글자</span><span>글자</span>
+                            </div>
+                        </div>
+                    </figure>
+
+                    <hr>
+                    <ul class="icon">
+                        <li>
+                            <p><img src="./img/ghkwkdtlf.svg" alt=""></p>
+                            <p>화장실</p>
+                        </li>
+                        <li>
+                            <p><img src="./img/wkddodlstltjf.svg" alt=""></p>
+                            <p>장애인 시설</p>
+                        </li>
+                        <li>
+                            <p><img src="./img/zkvp.svg" alt=""></p>
+                            <p>카페</p>
+                        </li>
+                        <li>
+                            <p><img src="./img/tlrekd.svg" alt=""></p>
+                            <p>식당</p>
+                        </li>
+                        <li>
+                            <p><img src="./img/dksso.svg" alt=""></p>
+                            <p>안내센터</p>
+                        </li>
+                        <li>
+                            <p><img src="./img/dmatneo.svg" alt=""></p>
+                            <p>음수대</p>
+                        </li>
+                        <li>
+                            <p><img src="./img/aovyth.svg" alt=""></p>
+                            <p>매표소</p>
+                        </li>
+                        <li>
+                            <p><img src="./img/dpffl.svg" alt=""></p>
+                            <p>엘리베이터</p>
+                        </li>
+                        <li>
+                            <p><img src="./img/gedan.svg" alt=""></p>
+                            <p>계단</p>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="incon" data-name="내부">
+                    <div class="tab">
+                        <ul class="tower nav">
+                            <li data-name="식물">식물 문화센터</li>
+                            <li data-name="온실">온실</li>
+                        </ul>
+
+                        <div class="tabct">
+                            <div class="tab map" data-name="식물">
+                                    <ul class="floor nav">
+                                        <li data-name="f4">F4</li>
+                                        <li data-name="f2">F2</li>
+                                        <li data-name="f1">F1</li>
+                                        <li data-name="b1">B1</li>
+                                        <li data-name="b2">B2</li>
+                                    </ul>
+                                    <div class="tabct">
+                                        <p data-name="f4"><img src="./img/f4.jpg" alt=""></p>
+                                        <p data-name="f2"><img src="./img/f2.jpg" alt=""></p>
+                                        <p data-name="f1"><img src="./img/f1.jpg" alt=""></p>
+                                        <p data-name="b1"><img src="./img/B1.jpg" alt=""></p>
+                                        <p data-name="b2">지 하 주 차 장</p>
+                                    </div>
+                            </div>
+
+
+                            <div class = "tab map" data-name="온실">
+                                <ul class="floor nav">
+                                    <li>F1</li>
+                                </ul>
+
+                                <div class="tabct">
+                                    <p><img src="./img/dhstlfwleh.svg" alt=""></p>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <hr>
+                        <ul class="icon">
+                            <li>
+                                <p><img src="./img/ghkwkdtlf.svg" alt=""></p>
+                                <p>화장실</p>
+                            </li>
+                            <li>
+                                <p><img src="./img/wkddodlstltjf.svg" alt=""></p>
+                                <p>장애인 시설</p>
+                            </li>
+                            <li>
+                                <p><img src="./img/zkvp.svg" alt=""></p>
+                                <p>카페</p>
+                            </li>
+                            <li>
+                                <p><img src="./img/tlrekd.svg" alt=""></p>
+                                <p>식당</p>
+                            </li>
+                            <li>
+                                <p><img src="./img/dksso.svg" alt=""></p>
+                                <p>안내센터</p>
+                            </li>
+                            <li>
+                                <p><img src="./img/dmatneo.svg" alt=""></p>
+                                <p>음수대</p>
+                            </li>
+                            <li>
+                                <p><img src="./img/aovyth.svg" alt=""></p>
+                                <p>매표소</p>
+                            </li>
+                            <li>
+                                <p><img src="./img/dpffl.svg" alt=""></p>
+                                <p>엘리베이터</p>
+                            </li>
+                            <li>
+                                <p><img src="./img/gedan.svg" alt=""></p>
+                                <p>계단</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

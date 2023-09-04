@@ -1,0 +1,390 @@
+@import "_reset";
+@import "_mixin";
+@import "_inc";
+
+    .bg {
+        position: relative;
+        background-image: url("../img/architecture-1367903_1920.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    
+        width: 100%;
+        height: 400px;
+        > h2 {
+          @include h2();
+          z-index: 99;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          background-image: url("../img/bottom.png");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: bottom;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          bottom: 0%;
+          z-index: 88;
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+      }
+    //////////////////
+    .indicator {
+        max-width: 1280px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+       padding-left: 20px;
+        >ul {
+            @include flex(flex-start, center);
+      
+            >li {
+                font-size: 14px;
+                padding-right: 20px;
+                margin-right: 10px;
+                position: relative;
+      
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-image: url("../img/icon.png");
+                    background-size: 100% 100%;
+                    width: 8px;
+                    height: 12px;
+                    margin-left: 10px;
+                }
+      
+                &:nth-last-of-type(1) {
+                    color: #90BC43;
+      
+                    &::after {
+                        content: "";
+                        background: none;
+                    }
+                }
+            }
+        }
+      }
+
+@media(max-width:480px){
+    .bg{height: 200px;}
+    .indicator{padding: 0 20px;}
+    
+    .space{
+        width: 100%;
+        margin: 0 auto;
+        .sub-f{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 20px;
+                margin-bottom: 50px;
+            }
+        }
+        //부제목
+    
+        .haha{
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid #ededed;
+            padding-left: 10px;
+            padding-bottom: 27px;
+            
+            .state{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #90BC43;
+                width: 93px; height: 42px;
+                border-radius: 50px;  
+                p{
+                    font-size: 16px;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+            .name{
+                margin-left: 30px;
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+        // 상태 및 이름
+        .ttt{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin: 101px 0 140px 0;
+            .im{
+                width: 80%; 
+                img{
+                    margin: 0 auto;
+                    object-fit: cover;
+                    width: 80vw; 
+                    aspect-ratio: 1;
+                    border-radius: 50px;
+                }
+            }
+            .tdt{
+                
+                table{
+                    width: 80%;
+                    white-space: nowrap;
+                    td{
+                        padding:22px 0;
+                    }
+                    td:nth-of-type(1){
+                        font-weight: bold;
+                    }
+                    td:nth-of-type(2n){
+                        padding-left: 90px;
+                    }
+                }
+                
+            }
+        }
+        // 유실물 사진 및 정보
+        .statee{
+            position: absolute; right: 10px; bottom: -100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: #90BC43;
+            width: 70px; height: 40px;
+            border-radius: 10px;  
+            p{
+                font-size: 16px;
+                color: white;
+                text-align: center;
+            }
+        }
+        //목록 버튼
+    }
+    // 유실물 정보 콘텐츠
+    
+}
+
+
+    
+    
+    
+
+
+
+
+
+
+@media(min-width:481px) and (max-width:1023px){
+    .bg{height: 200px;}
+    .indicator{padding: 0 20px;}
+    
+    .space{
+        width: 100%;
+        margin: 0 auto;
+        .sub-f{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 24px;
+                margin-bottom: 50px;
+            }
+        }
+        //부제목
+    
+        .haha{
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid #ededed;
+            padding-left: 10px;
+            padding-bottom: 27px;
+            .state{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #90BC43;
+                width: 93px; height: 42px;
+                border-radius: 50px;  
+                p{
+                    font-size: 16px;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+            .name{
+                margin-left: 30px;
+                p{
+                    font-size: 24px;
+                }
+            }
+        }
+        // 상태 및 이름
+        .ttt{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin: 101px 0 140px 0;
+            position: relative;
+            .im{
+                width: 410px; height: 400px;
+                img{
+                    object-fit: cover;
+                    width: 100%; aspect-ratio: 1; 
+                    border-radius: 50px;
+                }
+            }
+            .tdt{
+        
+                table{
+                    
+                    white-space: nowrap;
+                    td{
+                        padding:22px 0;
+                    }
+                    td:nth-of-type(1){
+                        font-weight: bold;
+                    }
+                    td:nth-of-type(2n){
+                        padding-left: 90px;
+                    }
+                }
+                
+            }
+        }
+        // 유실물 사진 및 정보
+        .statee{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: absolute; right: 10px; bottom: -100px;
+            background-color: #90BC43;
+            width: 70px; height: 40px;
+            border-radius: 10px;  
+            p{
+                font-size: 16px;
+                color: white;
+                text-align: center;
+            }
+        }
+        //목록 버튼
+    }
+    // 유실물 정보 콘텐츠
+    
+}
+
+@media(min-width:1024px){
+   
+    
+    .space{
+        max-width: 1280px;
+        margin: 0 auto;
+        .sub-f{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 24px;
+                margin-bottom: 37px;
+            }
+        }
+        //부제목
+    
+        .haha{
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid #ededed;
+            padding-bottom: 27px;
+            padding: 0 20px;
+            .state{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #90BC43;
+                width: 93px; height: 42px;
+                border-radius: 50px;  
+                p{
+                    font-size: 16px;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+            .name{
+                margin-left: 30px;
+                p{
+                    font-size: 24px;
+                }
+            }
+        }
+        // 상태 및 이름
+        .ttt{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 118.66px;
+            margin: 101px 0 140px 0;
+            .im{
+                width: 410px; height: 400px;
+                img{
+                    object-fit: cover;
+                    width: 100%; aspect-ratio: 1; 
+                    border-radius: 50px;
+                }
+            }
+            .tdt{
+                
+                table{
+                    white-space: nowrap;
+                    td{
+                        padding:22px 0;
+                    }
+                    td:nth-of-type(1){
+                        font-weight: bold;
+                    }
+                    td:nth-of-type(2n){
+                        padding-left: 114px;
+                    }
+                }
+                
+            }
+            .statee{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                position: absolute; right: 10px; bottom: -160px;
+                background-color: #90BC43;
+                width: 70px; height: 40px;
+                border-radius: 10px;  
+                margin: 93px 0 87px 0;
+                
+                    p{
+                        font-size: 16px;
+                        color: white;
+                        text-align: center;
+                    }
+                 
+            }
+            //목록 버튼
+        }
+        // 유실물 사진 및 정보
+        
+    }
+    // 유실물 정보 콘텐츠
+}
+@import "t-inc";
+@import "m-inc";
+
